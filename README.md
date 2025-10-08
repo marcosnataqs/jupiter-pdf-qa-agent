@@ -16,7 +16,7 @@ This is a **30-minute live coding challenge** where you'll implement:
 │   ├── agent.py       # ✅ LangGraph ReAct agent (complete)
 │   └── tools.py       # ⚠️  Placeholder retrieval tool (TODO)
 ├── app.py             # ✅ Streamlit UI with chat + file upload
-├── pyproject.toml     # ✅ Dependencies configured
+├── requirements.txt   # ✅ Dependencies configured
 └── README.md          # 📖 This file
 ```
 
@@ -26,6 +26,11 @@ This is a **30-minute live coding challenge** where you'll implement:
 - **LangGraph Agent**: Complete ReAct agent with tool calling setup
 - **Tool Registry**: Placeholder tool ready to be implemented
 
+## 📋 Prerequisites
+
+- Python 3.11 or higher
+- OpenAI API key
+
 ## 🚀 Quick Start
 
 ### 1. Setup
@@ -34,15 +39,24 @@ This is a **30-minute live coding challenge** where you'll implement:
 # Create .env file with your OpenAI API key
 echo "OPENAI_API_KEY=sk-your-key-here" > .env
 
-# Install dependencies
-uv sync
+# Create and activate a virtual environment (optional but recommended)
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
-# Run the app
-uv run python -m streamlit run app.py
+# Install dependencies (includes Streamlit and all required packages)
+pip install -r requirements.txt
 ```
 
-### 2. Open in Browser
+### 2. Run the App
+
+```bash
+streamlit run app.py
+```
+
+### 3. Open in Browser
 
 Navigate to `http://localhost:8501`
 
-### 3. Start Coding!
+Streamlit will automatically open your browser. If it doesn't, manually open the URL shown in your terminal.
+
+### 4. Start Coding!
